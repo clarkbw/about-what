@@ -117,7 +117,7 @@ exports.testWindowUnloadEvent = function(assert, done) {
 
   open().then(function(window) {
     let { document, ele: ele2 } = makeEle(window);
-    
+
     remover2 = gListen(window, ele2, 'click', function() {
       eHappened = true;
     });
