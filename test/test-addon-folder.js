@@ -86,5 +86,4 @@ exports.testBackPath = function(assert, done) {
   done();
 }
 
-
 require('sdk/test').run(exports);
