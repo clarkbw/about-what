@@ -1,9 +1,9 @@
 {
   "name": "addon-pathfinder",
   "author": "Erik Vold",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MPL 2.0",
-  "main": "./lib/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jetpack-labs/pathfinder"
