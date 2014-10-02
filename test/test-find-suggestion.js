@@ -1,3 +1,3 @@
 'use strict';
 
-require('pathfinder/ui/findbar/suggestion');
+require('../ui/findbar/suggestion');

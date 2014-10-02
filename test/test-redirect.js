@@ -7,7 +7,7 @@ const tabs = require('sdk/tabs');
 const { data } = require('sdk/self');
 const { Loader } = require("sdk/test/loader");
 
-const { Redirect } = require('addon-pathfinder/redirect');
+const { Redirect } = require('../redirect');
 
 function getData(url) {
   return 'data:text/javascript;charset=utf-8,' + encodeURIComponent(url);
@@ -15,7 +15,7 @@ function getData(url) {
 
 exports.testRedirect = function(assert, done) {
   const loader = Loader(module);
-  const httpd = loader.require('sdk/test/httpd');
+  const httpd = loader.require('addon-httpd');
   const { startServerAsync } = httpd;
   let requestCount = 0;
   let serverPort = 8058;

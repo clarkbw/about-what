@@ -40,4 +40,4 @@ exports.testAddAboutWhat = function(assert, done) {
 
 }
 
-require('test').run(exports);
+require('sdk/test').run(exports);

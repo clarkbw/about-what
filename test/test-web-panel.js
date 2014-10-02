@@ -12,9 +12,9 @@ const { data } = require('sdk/self');
 const { fromIterator } = require('sdk/util/array');
 const { URL } = require('sdk/url');
 
-const { WebPanel } = require('pathfinder/ui/web-panel');
-const { show, hide } = require('pathfinder/ui/sidebar/actions');
-const { isShowing } = require('pathfinder/ui/sidebar/state');
+const { WebPanel } = require('../ui/web-panel');
+const { show, hide } = require('../ui/sidebar/actions');
+const { isShowing } = require('../ui/sidebar/state');
 
 const BUILTIN_SIDEBAR_MENUITEMS = [
   'menu_socialSidebar',
@@ -420,7 +420,7 @@ exports.testSidebarIsNotOpenInNewPrivateWindow = function(assert, done) {
       title: testName,
       url: 'data:text/html;charset=utf-8,'+testName
     });
-   
+
     sidebar.on('show', function() {
       assert.equal(isPrivate(window), false, 'the new window is not private');
       assert.equal(isSidebarShowing(window), true, 'the sidebar is showing');

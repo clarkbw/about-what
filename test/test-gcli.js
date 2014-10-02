@@ -3,7 +3,7 @@
 const { Loader } = require('sdk/test/loader');
 const { addCommand: add,
         hasCommand: has,
-        removeCommand: remove } = require('pathfinder/devtools/gcli');
+        removeCommand: remove } = require('../devtools/gcli');
 
 exports.testCommand = function(assert) {
   assert.ok(!has('test'), 'the test command dne');

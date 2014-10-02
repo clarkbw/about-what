@@ -7,9 +7,9 @@ const { Ci } = require('chrome');
 const tabs = require('sdk/tabs');
 const { data } = require('sdk/self');
 const { Loader } = require('sdk/test/loader');
-const httpd = require('sdk/test/httpd');
+const httpd = require('addon-httpd');
 
-const { RequestRule } = require('pathfinder/connections');
+const { RequestRule } = require('../connections');
 
 exports.testNewHeader = function(assert, done) {
   let rule = RequestRule({

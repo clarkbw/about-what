@@ -9,13 +9,12 @@ const { Loader } = require("sdk/test/loader");
 const { Request } = require('sdk/request');
 const options = require("@test/options");
 
-const { Download } = require('pathfinder/download');
-
-const { Services } = require('pathfinder/chrome/services');
+const { Download } = require('../download');
+const { Services } = require('../chrome/services');
 
 exports.testDownload = function(assert, done) {
   const loader = Loader(module);
-  const httpd = loader.require('sdk/test/httpd');
+  const httpd = loader.require('addon-httpd');
 
   let serverPort = 8057;
   let server = httpd.startServerAsync(serverPort);

@@ -6,7 +6,7 @@
 const { Loader } = require('sdk/test/loader');
 const { before, after } = require('sdk/test/utils');
 
-const { get, set } = require('pathfinder/storage');
+const { get, set } = require('../storage');
 
 exports.testGetNothing = function(assert, done) {
   get().then(function({ data }) {

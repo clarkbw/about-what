@@ -8,7 +8,7 @@ const { getMostRecentBrowserWindow } = require('sdk/window/utils');
 const { open, close, promise: windowPromise } = require('sdk/window/helpers');
 const NS_XUL = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-const { listen: gListen } = require('pathfinder/xul/listen');
+const { listen: gListen } = require('../xul/listen');
 
 // from https://developer.mozilla.org/en-US/docs/Web/API/document.createEvent
 function simulateClick(ele) {

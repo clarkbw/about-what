@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 'use strict';
 
-const panic = require('pathfinder/panic');
+const panic = require('../panic');
 const prefs = require('sdk/preferences/service');
 const { Loader } = require('sdk/test/loader');
 

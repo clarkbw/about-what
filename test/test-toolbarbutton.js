@@ -4,7 +4,7 @@
 'use strict';
 
 const windows = require("sdk/windows").browserWindows;
-const toolbarbutton = require("pathfinder/ui/toolbarbutton");
+const toolbarbutton = require("addon-pathfinder/ui/toolbarbutton");
 //const { Loader } = require('sdk/test/loader');
 const winUtils = require('sdk/window/utils');
 

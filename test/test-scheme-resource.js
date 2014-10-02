@@ -1,3 +1,3 @@
 'use strict';
 
-require('pathfinder/scheme/resource');
+require('../scheme/resource');

@@ -2,7 +2,7 @@
 
 const JETPACK_DIR_BASENAME = "jetpack";
 
-const FOLDER = require('pathfinder/addon/folder');
+const FOLDER = require('../addon/folder');
 
 const { Loader } = require('sdk/test/loader');
 const { Cc, Ci } = require('chrome');

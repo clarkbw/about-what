@@ -1,6 +1,6 @@
 'use strict';
 
-const { permissions } = require('pathfinder/content/permissions');
+const { permissions } = require('../content/permissions');
 
 exports.testAddRemovePermission = function(assert) {
   permissions.add({
