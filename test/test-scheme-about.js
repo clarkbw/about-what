@@ -22,7 +22,7 @@ function openTabGetContent(url, callback) {
 
 exports.testAddAboutWhat = function(assert, done) {
   const loader = Loader(module);
-  const { add } = loader.require('pathfinder/scheme/about');
+  const { add } = loader.require('../index');
 
   add({
   	what: 'test',

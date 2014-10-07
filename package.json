@@ -1,14 +1,12 @@
 {
-  "name": "addon-pathfinder",
+  "id": "about-what@jetpack-labs.com",
+  "name": "about-what",
   "author": "Erik Vold",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "license": "MPL 2.0",
-  "main": "index.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jetpack-labs/pathfinder"
-  },
-  "devDependencies": {
-    "addon-httpd": "0.0.1"
+    "url": "https://github.com/jetpack-labs/about-what"
   }
 }
