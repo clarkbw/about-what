@@ -1,4 +1,7 @@
-'use strict';
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+"use strict";
 
 const { Loader } = require('sdk/test/loader');
 const tabs = require('sdk/tabs')
@@ -20,7 +23,7 @@ function openTabGetContent(url, callback) {
   })
 }
 
-exports.testAddAboutWhat = function(assert, done) {
+exports.testAddAboutWhat = function*(assert) {
   const loader = Loader(module);
   const { add } = loader.require('../index');
 
@@ -29,15 +32,15 @@ exports.testAddAboutWhat = function(assert, done) {
     url: 'data:text/html;charset=utf-8,<body>test</body>'
   });
 
-  openTabGetContent('about:test', function(msg) {
-    assert.equal(msg, 'test', 'about:test content is "test"');
-    loader.unload();
-    openTabGetContent('about:test', function(msg) {
-      assert.notEqual(msg, 'test', 'about:test content is "test"');
-      done();
+  let msg = yield new Promise(resolve => {
+    openTabGetContent('about:test', (msg) => {
+      assert.equal(msg, 'test', 'about:test content is "test"');
+      loader.unload();
+      openTabGetContent('about:test', resolve);
     });
-  });
+  })
 
+  assert.notEqual(msg, 'test', 'about:test content is "test"');
 }
 
 require('sdk/test').run(exports);
